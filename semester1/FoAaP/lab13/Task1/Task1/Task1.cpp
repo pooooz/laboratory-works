@@ -10,8 +10,11 @@ int main() {
 	int n = 0;
 	enterNumberI(n);
 	long double* b = new long double[n];
-	cout << "Введите элементы бинарного дерева: ";
-	for (int i = 0; i < n; i++) enterNumberIR(b[i]);
+	cout << "Введите элементы бинарного дерева: \n";
+	for (int i = 0; i < n; i++) {
+		cout << "Введите " << i + 1 << " элемент: ";
+		enterNumberIR(b[i]);
+	}
 	TREE* top;
 	first(top, b[0]);
 	for (int i = 1; i < n; i++)

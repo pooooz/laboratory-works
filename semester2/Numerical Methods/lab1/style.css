@@ -1,0 +1,33 @@
+.task1 {
+    display: flex;
+}
+
+.task1__graph {
+    margin: 0 0 0 30px;
+    width: 50%;
+    height: 50%;
+}
+
+.task2 {
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task2__graph {
+    margin: 0 0 0 30px;
+    width: 50%;
+    height: 50%;
+}
+
+.task2__derivatives {
+    display: flex;
+}
+
+.task2__derivative-1 {
+    width: 50%;
+}
+
+.task2__derivative-2 {
+    width: 50%;
+}

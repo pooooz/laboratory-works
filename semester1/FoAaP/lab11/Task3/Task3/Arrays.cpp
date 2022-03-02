@@ -1,4 +1,4 @@
-#include "Arrays.h"
+ï»¿#include "Arrays.h"
 #include <iostream>
 #include <iomanip>
 
@@ -8,14 +8,14 @@ void enterNumber(long double& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
 void initializeArray(long double** arrayPtr, size_t n, size_t m) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			cout << "Ââåäèòå ýëåìåíò " << i << " , " << j << " : ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ " << i << " , " << j << " : ";
 			enterNumber(arrayPtr[i][j]);
 		}
 	}
@@ -31,7 +31,7 @@ void initializeArray_r(long double** arrayPtr, size_t n) {
 }
 
 void displayArray(long double** arrayPtr, size_t n, size_t m) {
-	cout << "\nÄâóìåðíûé ìàññèâ: \n" << endl;
+	cout << "\nÐ”Ð²ÑƒÐ¼ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: \n" << endl;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cout << setw(10) << arrayPtr[i][j];
@@ -51,7 +51,7 @@ void deleteArray(long double** arrayPtr, size_t n, size_t m) {
 bool checkZeroes(long double** arrayPtr, double n, double m, int i) {
 	for (int j = 0; j < m; j++) {
 		if (arrayPtr[i][j] == 0) {
-			cout << "Â ñòðîêå " << i + 1 << " íàõîäÿòñÿ íóëè" << endl;
+			cout << "Ð’ ÑÑ‚Ñ€Ð¾ÐºÐµ " << i + 1 << " Ð½Ð°Ñ…Ð¾Ð´ÑÑ‚ÑÑ Ð½ÑƒÐ»Ð¸" << endl;
 			return false;
 		}
 

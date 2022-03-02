@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 #include <string>
 #include <typeinfo>
@@ -57,8 +57,8 @@ int main() {
 
 	char* n = new char[255];
 
-	cout << "Ââåäèòå ðàçìåðíîñòü ìàññèâà n x n" << endl;
-	cout << "Ââåäèòå n: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð° n x n" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ n: ";
 	cin >> n;
 
 	double k = atof(n);
@@ -70,15 +70,15 @@ int main() {
 		}
 
 		initializeArray(arrayPtr, k);
-		cout << "Èñõîäíûé ìàññèâ: \n" << endl;
+		cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: \n" << endl;
 		displayArray(arrayPtr, k);
 		shiftArray(arrayPtr, k);
-		cout << "Ìàññèâ ñî ñäâèãîì: \n" << endl;
+		cout << "ÐœÐ°ÑÑÐ¸Ð² ÑÐ¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð¼: \n" << endl;
 		displayArray(arrayPtr, k);
 
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä!!!" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 	
 

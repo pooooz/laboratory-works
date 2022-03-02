@@ -1,4 +1,4 @@
-#include "Arrays.h"
+ï»¿#include "Arrays.h"
 #include <iostream>
 
 using namespace std;
@@ -7,13 +7,13 @@ void enterNumber(long double& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
 void initializeArray(long double* arrayPtr, double array_size) {
 	for (int i = 0; i < array_size; i++) {
-		cout << "Ââåäèòå " << i + 1 << " ýëåìåíò ìàññèâà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 		enterNumber(arrayPtr[i]);
 	}
 }

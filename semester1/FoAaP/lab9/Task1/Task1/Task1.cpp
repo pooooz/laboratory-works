@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <Windows.h>
 
@@ -37,17 +37,17 @@ int main() {
 	char srch;
 	cout << str;
 
-	cout << "Ââåäèòå ñòðîêó: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ: ";
 	cin.getline(str, 255);
 
-	cout << "Ââåäèòå ñèìâîë: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»: ";
 	cin >> srch;
 
 
-	cout << "\nÐåçóëüòàò strrchr: ";
+	cout << "\nÐ ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ strrchr: ";
 	cout << strrchr(str, srch) << endl;
 
-	cout << "\nÐåçóëüòàò ñîáñòâåííîé ôóíêöèè: ";
+	cout << "\nÐ ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÑÐ¾Ð±ÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸: ";
 	cout << own_strrchr(str, srch) << "\n" << endl;
 
 	delete[]str;

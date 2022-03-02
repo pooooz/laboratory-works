@@ -1,4 +1,4 @@
-#include "BinaryTree.h"
+ï»¿#include "BinaryTree.h"
 #include <iostream>
 using namespace std;
 
@@ -6,7 +6,7 @@ void enterNumberI(int& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
@@ -14,7 +14,7 @@ void enterNumberIR(long double& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 

@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
 void initializeArray(long double* arrayPtr, long double* arrayPtr_copy, double array_size) {
 	for (int i = 0; i < array_size; i++) {
-		cout << "Ââåäèòå " << i + 1 << " ýëåìåíò ìàññèâà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 		cin >> arrayPtr[i];
 		arrayPtr_copy[i] = arrayPtr[i];
 	}
@@ -54,7 +54,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	char* array_size = new char[255];
-	cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 	cin >> array_size;
 
 	double k = atof(array_size);
@@ -66,16 +66,16 @@ int main() {
 
 		initializeArray(Array, Array_copy, k);
 
-		cout << "\nÈñõîäíûé ìàññèâ: ";
+		cout << "\nÐ˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
 		displayArray(Array, k);
 
 		insSort_ascending(Array, k);
 		insSort_descending(Array_copy, k);
 
-		cout << "Îòñîðòèðîâàííûé ïî âîçðàñòàíèþ ìàññèâ: ";
+		cout << "ÐžÑ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¿Ð¾ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸ÑŽ Ð¼Ð°ÑÑÐ¸Ð²: ";
 		displayArray(Array, k);
 
-		cout << "Îòñîðòèðîâàííûé ïî óáâàíèþ ìàññèâ: ";
+		cout << "ÐžÑ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¿Ð¾ ÑƒÐ±Ð²Ð°Ð½Ð¸ÑŽ Ð¼Ð°ÑÑÐ¸Ð²: ";
 		displayArray(Array_copy, k);
 
 		deleteArray(Array);
@@ -84,7 +84,7 @@ int main() {
 
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´" << endl;
 	}
 
 

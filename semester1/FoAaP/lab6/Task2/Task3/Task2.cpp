@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -7,7 +7,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	double n;
-	cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ìàññèâà n: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð° n: ";
 	cin >> n;
 
 	if (n >= 1 && n - int(n) == 0) {
@@ -15,12 +15,12 @@ int main() {
 
 		for (int i = 0; i < n; i++) {
 			long double temp;
-			cout << "Ââåäèòå çíà÷åíèå " << i + 1 << " ýëåìåíòà ìàññèâà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 			cin >> temp;
 			Array[i] = temp;
 		}
 
-		cout << "Âàø ìàññèâ: [ ";
+		cout << "Ð’Ð°Ñˆ Ð¼Ð°ÑÑÐ¸Ð²: [ ";
 
 		for (int i = 0; i < n; i++) {
 			cout << *(Array + i) << " ";
@@ -34,7 +34,7 @@ int main() {
 				zero_counter++;
 			}
 		}
-		cout << "Êîëè÷åñòâî íóëåé â ìàññèâå: " << zero_counter << endl;
+		cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð½ÑƒÐ»ÐµÐ¹ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << zero_counter << endl;
 
 
 		if (zero_counter >= 2) {
@@ -43,7 +43,7 @@ int main() {
 				index++;
 			}
 
-			cout << "Ïåðâûé ýëåìåíò ìàññèâà, ðàâíûé íóëþ: " << index + 1 << " ýëåìåíò" << endl;
+			cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°, Ñ€Ð°Ð²Ð½Ñ‹Ð¹ Ð½ÑƒÐ»ÑŽ: " << index + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚" << endl;
 			index++;
 
 			long double product = 1;
@@ -52,16 +52,16 @@ int main() {
 				product *= *(Array + index);
 				index++;
 			}
-			cout << "Ïðîèçâåäåíèå ýëåìåíòîâ ìàññèâà: " << product << endl << endl;
+			cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << product << endl << endl;
 
 		}
 		else {
-			cout << "Â ìàññèâå ìåíüøå äâóõ íóëåé" << endl << endl;
+			cout << "Ð’ Ð¼Ð°ÑÑÐ¸Ð²Ðµ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð´Ð²ÑƒÑ… Ð½ÑƒÐ»ÐµÐ¹" << endl << endl;
 		}
 		delete[]Array;
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´" << endl;
 	}
 
 	system("pause");

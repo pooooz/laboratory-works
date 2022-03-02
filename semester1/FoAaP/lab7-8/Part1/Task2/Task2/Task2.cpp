@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
 void initializeArray(long double* arrayPtr, double array_size) {
 	for (int i = 0; i < array_size; i++) {
-		cout << "Ââåäèòå " << i + 1 << " ýëåìåíò ìàññèâà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 		cin >> arrayPtr[i];
 	}
 }
@@ -63,7 +63,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	char* array_size = new char[255];
-	cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 	cin >> array_size;
 	cout << endl;
 
@@ -76,31 +76,31 @@ int main() {
 
 		initializeArray(Array, k);
 
-		cout << "\nÈñõîäíûé ìàññèâ: ";
+		cout << "\nÐ˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
 		displayArray(Array, k);
 
 		insSort(Array, k);
 
-		cout << "\nÎòñîðòèðîâàííûé ìàññèâ: ";
+		cout << "\nÐžÑ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
 		displayArray(Array, k);
 
 
 		long double key;
-		cout << "Ââåäèòå èñêîìûé ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸ÑÐºÐ¾Ð¼Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> key;
 		cout << endl;
 
 		if (checkEntry(Array, k, key)) {
-			cout << "Èñêîìûé ýëåìåíò â óïîðÿäî÷åííîì ìàññèâå èìååò èíäåêñ: " << binarySearch(Array, k, key) << endl;
-			cout << "Èëè ÿâëÿåòñÿ " << binarySearch(Array, k, key) + 1 << " ýëåìåíòîì óïîðÿäî÷åííîãî ìàññèâà\n" << endl;
+			cout << "Ð˜ÑÐºÐ¾Ð¼Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² ÑƒÐ¿Ð¾Ñ€ÑÐ´Ð¾Ñ‡ÐµÐ½Ð½Ð¾Ð¼ Ð¼Ð°ÑÑÐ¸Ð²Ðµ Ð¸Ð¼ÐµÐµÑ‚ Ð¸Ð½Ð´ÐµÐºÑ: " << binarySearch(Array, k, key) << endl;
+			cout << "Ð˜Ð»Ð¸ ÑÐ²Ð»ÑÐµÑ‚ÑÑ " << binarySearch(Array, k, key) + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð¼ ÑƒÐ¿Ð¾Ñ€ÑÐ´Ð¾Ñ‡ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°\n" << endl;
 		}
 		else {
-			cout << "Ìàññèâ íå ñîäåðæèò óêàçàííûé ýëåìåíò\n" << endl;
+			cout << "ÐœÐ°ÑÑÐ¸Ð² Ð½Ðµ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n" << endl;
 		}
 		delete[]Array;
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä!!!" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 	system("pause");
 	return 0;

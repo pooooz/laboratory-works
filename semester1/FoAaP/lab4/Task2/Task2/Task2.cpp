@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 
 using namespace std;
@@ -8,7 +8,7 @@ int main() {
 
 	int number, temp, counter, sum;
 
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 	cin >> number;
 
 	temp = number;
@@ -20,7 +20,7 @@ int main() {
 		temp /= 10;
 	}
 
-	cout << "Êîëè÷åñòîâ öèôğ â ÷èñëå: " << counter << endl;
+	cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² Ñ†Ğ¸Ñ„Ñ€ Ğ² Ñ‡Ğ¸ÑĞ»Ğµ: " << counter << endl;
 
 	
 	for (int i = 1; i <= counter; i++) {
@@ -28,7 +28,7 @@ int main() {
 		number /= 10;
 	}
 
-	cout << "Ñóììà öèôğ çàäàííîãî ÷èñëà: " << sum << endl;
+	cout << "Ğ¡ÑƒĞ¼Ğ¼Ğ° Ñ†Ğ¸Ñ„Ñ€ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ°: " << sum << endl;
 
 	system("pause");
 	return 0;

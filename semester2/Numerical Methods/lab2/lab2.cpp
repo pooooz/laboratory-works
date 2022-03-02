@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 #include <cmath>
 
@@ -75,13 +75,13 @@ int main() {
 
 	long double start, end, delta;
 
-	cout << "Ââåäèòå íà÷àëî ïðîìåæóòêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚ÐºÐ°: ";
 	cin >> start;
 
-	cout << "Ââåäèòå êîíåö ïðîìåæóòêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð½ÐµÑ† Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚ÐºÐ°: ";
 	cin >> end;
 
-	cout << "Ââåäèòå øàã ðàçáèåíèÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ°Ð³ Ñ€Ð°Ð·Ð±Ð¸ÐµÐ½Ð¸Ñ: ";
 	cin >> delta;
 
 	cout << "\n\n";

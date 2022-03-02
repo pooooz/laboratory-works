@@ -1,69 +1,69 @@
-#include "Department.h"
+ï»¿#include "Department.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 Employee inputEmployee(void) {
-	char male = 'ì';
-	char female = 'æ';
+	char male = 'Ð¼';
+	char female = 'Ð¶';
 	Employee employee;
 
-	cout << "Ââåäèòå ôàìèëèþ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ: ";
 	cin >> employee.LastName;
-	cout << "Ââåäèòå èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	cin >> employee.FirstName;
-	cout << "Ââåäèòå îò÷åñòâî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ‚Ñ‡ÐµÑÑ‚Ð²Ð¾: ";
 	cin >> employee.MiddleName;
 
 Gender:
-	cout << "Ââåäèòå ïîë ðàáîòíèêà (ì/æ): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð» Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ° (Ð¼/Ð¶): ";
 	cin >> employee.Gender;
 	if (employee.Gender == male || employee.Gender == female) {
 
 	}
 	else {
-		cout << "Óêàçàíû íåêîððåêòíûå äàííûå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð£ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 		goto Gender;
 	}
 
 
-	cout << "Ââåäèòå ñïåöèàëüíîñòü: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: ";
 	cin >> employee.Speciality;
 
 Age:
-	cout << "Ââåäèòå âîçðàñò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
 	cin >> employee.Age;
 	if (employee.Age == to_string((int)atof(employee.Age)) && atof(employee.Age) > 0 &&
 		atof(employee.Age) - int(atof(employee.Age)) == 0) {
 
 	}
 	else {
-		cout << "Óêàçàíû íåêîððåêòíûå äàííûå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð£ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 		goto Age;
 	}
 
 WorkExperience:
-	cout << "Ââåäèòå îïûò ðàáîòû (â êîëè÷åñòâå ëåò): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð¿Ñ‹Ñ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ (Ð² ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ðµ Ð»ÐµÑ‚): ";
 	cin >> employee.WorkExperience;
 	if (employee.WorkExperience == to_string((int)atof(employee.WorkExperience)) && atof(employee.WorkExperience) > 0
 		&& atof(employee.WorkExperience) - int(atof(employee.WorkExperience)) == 0 && atof(employee.WorkExperience) < atof(employee.Age)) {
 	}
 	else {
-		cout << "Óêàçàíû íåêîððåêòíûå äàííûå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð£ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 		goto WorkExperience;
 	}
 
 
 YearOfBirth:
-	cout << "Ââåäèòå ãîä ðîæäåíèÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ: ";
 	cin >> employee.YearOfBirth;
 	if (employee.YearOfBirth == to_string((int)atof(employee.YearOfBirth)) && atof(employee.YearOfBirth) > 0
 		&& atof(employee.YearOfBirth) - int(atof(employee.YearOfBirth)) == 0) {
 
 	}
 	else {
-		cout << "Óêàçàíû íåêîððåêòíûå äàííûå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð£ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 		goto YearOfBirth;
 	}
 
@@ -73,31 +73,31 @@ YearOfBirth:
 void outputEmployee(Employee Employee) {
 	cout.width(9);
 	cout.fill('0');
-	cout << "Ïîëíîå èìÿ: " << Employee.LastName << " " << Employee.FirstName << " " << Employee.MiddleName << endl;
-	cout << "Ïîë ðàáîòíèêà: " << Employee.Gender << endl;
-	cout << "Âîçðàñò: " << Employee.Age << " (" << Employee.YearOfBirth << ")" << endl;
-	cout << "Ñïåöèàëüíîñòü è ñòàæ ðàáîòû (â êîëè÷åñòâå ëåò): " << Employee.Speciality << ", " << Employee.WorkExperience << endl;
+	cout << "ÐŸÐ¾Ð»Ð½Ð¾Ðµ Ð¸Ð¼Ñ: " << Employee.LastName << " " << Employee.FirstName << " " << Employee.MiddleName << endl;
+	cout << "ÐŸÐ¾Ð» Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ°: " << Employee.Gender << endl;
+	cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: " << Employee.Age << " (" << Employee.YearOfBirth << ")" << endl;
+	cout << "Ð¡Ð¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ Ð¸ ÑÑ‚Ð°Ð¶ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ (Ð² ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ðµ Ð»ÐµÑ‚): " << Employee.Speciality << ", " << Employee.WorkExperience << endl;
 	cout << "\n";
 }
 
 
 void inputDepartment(HumanResourcesDepartment* Department) {
-	cout << "Ââåäèòå íàçâàíèå îòäåëà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¾Ñ‚Ð´ÐµÐ»Ð°: ";
 	cin >> Department->Name;
 
 Amount:
-	cout << "Ââåäèòå êîëè÷åñòâî ðàáîòíèêîâ (íå áîëåå " << MAX_EMPLOYEES << "): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ¾Ð² (Ð½Ðµ Ð±Ð¾Ð»ÐµÐµ " << MAX_EMPLOYEES << "): ";
 	cin >> Department->Amount;
 	if (Department->Amount == to_string((int)atof(Department->Amount)) && atof(Department->Amount) > 0
 		&& atof(Department->Amount) - int(atof(Department->Amount)) == 0 && atof(Department->Amount) <= 30) {
 	}
 	else {
-		cout << "Óêàçàíû íåêîððåêòíûå äàííûå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð£ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 		goto Amount;
 	}
 	for (int i = 0; i < atof(Department->Amount); i++) {
 		cout << "------------------------------------------------" << endl;
-		cout << "Ââåäèòå èíôîðìàöèþ î " << (i + 1) << " ðàáîòíèêå\n";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ " << (i + 1) << " Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐµ\n";
 		cout << "------------------------------------------------" << endl;
 		Department->Employees[i] = inputEmployee();
 	}
@@ -106,7 +106,7 @@ Amount:
 void outputDepartment(HumanResourcesDepartment Department) {
 	cout << endl;
 	cout << "*------------------------------------------------*" << endl;
-	cout << "Ñïèñîê ðàáîòíèêîâ îòäåëà \"" << Department.Name << "\"" << ": \n";
+	cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ¾Ð² Ð¾Ñ‚Ð´ÐµÐ»Ð° \"" << Department.Name << "\"" << ": \n";
 	cout << "*------------------------------------------------*" << endl;
 	for (int i = 0; i < atof(Department.Amount); i++) {
 		outputEmployee(Department.Employees[i]);
@@ -115,11 +115,11 @@ void outputDepartment(HumanResourcesDepartment Department) {
 }
 
 void outputListOfPensioners(HumanResourcesDepartment Department) {
-	char male = 'ì';
-	char female = 'æ';
+	char male = 'Ð¼';
+	char female = 'Ð¶';
 	cout << endl;
 	cout << "*------------------------------------------------*" << endl;
-	cout << "Ñïèñîê ïåíñèîíåðîâ îòäåëà \"" << Department.Name << "\"" << ": \n";
+	cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÐµÐ½ÑÐ¸Ð¾Ð½ÐµÑ€Ð¾Ð² Ð¾Ñ‚Ð´ÐµÐ»Ð° \"" << Department.Name << "\"" << ": \n";
 	cout << "*------------------------------------------------*" << endl;
 	for (int i = 0; i < atof(Department.Amount); i++) {
 		if ((Department.Employees[i].Gender == male && atof(Department.Employees[i].Age) >= 63) ||

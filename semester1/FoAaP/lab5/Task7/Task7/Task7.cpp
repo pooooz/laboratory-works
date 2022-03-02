@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -10,19 +10,19 @@ int main() {
 
 	long double a, b, x, x2, deltaX;
 
-	cout << "Ââåäèòå íà÷àëüíîå çíà÷åíèå X1: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ X1: ";
 	cin >> x;
 
-	cout << "Ââåäèòå êîíå÷íîå çíà÷åíèå X2: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ X2: ";
 	cin >> x2;
 
-	cout << "Ââåäèòå øàã çíà÷åíèÿ deltaX: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ°Ð³ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ deltaX: ";
 	cin >> deltaX;
 
-	cout << "Ââåäèòå a: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ a: ";
 	cin >> a;
 
-	cout << "Ââåäèòå b: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ b: ";
 	cin >> b;
 
 	cout << setw(20) << left << "X" << setw(20) << left << "Y1" << setw(20) << left << "Y2" << setw(20) << left << "Y3" << endl;

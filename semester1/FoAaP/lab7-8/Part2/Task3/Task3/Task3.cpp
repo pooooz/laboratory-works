@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <iomanip>
 #include <string>
 
@@ -7,14 +7,14 @@ using namespace std;
 void initializeArray(long double** arrayPtr, size_t n, size_t m) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			cout << "Ââåäèòå ýëåìåíò " << i << " , " << j << " : ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ " << i << " , " << j << " : ";
 			cin >> arrayPtr[i][j];
 		}
 	}
 }
 
 void displayArray(long double** arrayPtr, size_t n, size_t m) {
-	cout << "\nÄâóìåðíûé ìàññèâ: \n" << endl;
+	cout << "\nÐ”Ð²ÑƒÐ¼ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: \n" << endl;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cout << setw(10) << arrayPtr[i][j];
@@ -34,7 +34,7 @@ void deleteArray(long double** arrayPtr, size_t n, size_t m) {
 bool checkZeroes(long double** arrayPtr, double n, double m, int i) {
 	for (int j = 0; j < m; j++) {
 		if (arrayPtr[i][j] == 0) {
-			cout << "Â ñòðîêå " << i + 1 << " íàõîäÿòñÿ íóëè" << endl;
+			cout << "Ð’ ÑÑ‚Ñ€Ð¾ÐºÐµ " << i + 1 << " Ð½Ð°Ñ…Ð¾Ð´ÑÑ‚ÑÑ Ð½ÑƒÐ»Ð¸" << endl;
 			return false;
 		}
 
@@ -65,10 +65,10 @@ int main() {
 	char* m = new char[255];
 
 
-	cout << "Óêàæèòå ðàçìåðíîñòü ìàññèâà n x m" << endl;
-	cout << "Ââåäèòå êîëè÷åñòâî ìàññèâîâ n: ";
+	cout << "Ð£ÐºÐ°Ð¶Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð° n x m" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð¾Ð² n: ";
 	cin >> n;
-	cout << "Ââåäèòå êîëè÷åñòâî èõ ýëåìåíòîâ m: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¸Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² m: ";
 	cin >> m;
 
 	double k = atof(n);
@@ -85,13 +85,13 @@ int main() {
 
 		displayArray(arrayPtr, k, z);
 
-		cout << "Èñõîäíîå ïðîèçâåäåíèå: " << countProduct(arrayPtr, k, z) << "\n" << endl;
+		cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ð¾Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ: " << countProduct(arrayPtr, k, z) << "\n" << endl;
 
 		deleteArray(arrayPtr, k, z);
 		
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä\n" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´\n" << endl;
 	}
 
 	system("pause");

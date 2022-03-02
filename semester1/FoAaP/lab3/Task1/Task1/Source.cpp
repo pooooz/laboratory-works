@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <math.h>
 
 using namespace std;
@@ -13,7 +13,7 @@ int main() {
 
 	int num;
 
-	cout << "Ââåäèòå ÷åòûðåõçíà÷íîå ÷èñëî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ‚Ñ‹Ñ€ÐµÑ…Ð·Ð½Ð°Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 
 	cin >> num;
 
@@ -26,15 +26,15 @@ int main() {
 		n4 = (num / 1000) % 10;
 
 		if (n1 == n2 || n1 == n3 || n1 == n4 || n2 == n3 || n2 == n4 || n3 == n4) {
-			cout << "Åñòü ñîâïàäåíèÿ" << endl;
+			cout << "Ð•ÑÑ‚ÑŒ ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ñ" << endl;
 		}
 		else {
-			cout << "Ñîâïàäåíèé íåò" << endl;
+			cout << "Ð¡Ð¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹ Ð½ÐµÑ‚" << endl;
 		}
 
 	}
 	else {
-		cout << "Íåêîððåêòíûé ââîä" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´" << endl;
 	}
 
 	system("pause");

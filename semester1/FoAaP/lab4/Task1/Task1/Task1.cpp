@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 
 void k_variant(int n) {
 	double sum, product, temp;
 
-	cout << "Âàðèàíò ê) \n" << endl;
+	cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ðº) \n" << endl;
 
 	sum = 0.;
 	product = 1;
@@ -19,8 +19,8 @@ void k_variant(int n) {
 		product *= temp;
 	}
 
-	cout << "Ñóììà ïåðâûõ " << n << " ÷ëåíîâ ðàâíà " << sum << endl;
-	cout << "Ïðîèçâåäåíèå ïåðâûõ " << n << " ÷ëåíîâ ðàâíà " << product << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¿ÐµÑ€Ð²Ñ‹Ñ… " << n << " Ñ‡Ð»ÐµÐ½Ð¾Ð² Ñ€Ð°Ð²Ð½Ð° " << sum << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ñ… " << n << " Ñ‡Ð»ÐµÐ½Ð¾Ð² Ñ€Ð°Ð²Ð½Ð° " << product << endl;
 
 }
 
@@ -34,7 +34,7 @@ int main() {
 	product = 1;
 	temp = 1.;
 
-	cout << "Ââåäèòå êîëè÷åñòâî N ÷ëåíîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ N Ñ‡Ð»ÐµÐ½Ð¾Ð²: ";
 	cin >> n;
 
 	for (int i = 1; i <= n; i++) {
@@ -44,8 +44,8 @@ int main() {
 
 	}
 	
-	cout << "Ñóììà ïåðâûõ " << n << " ÷ëåíîâ ðàâíà " << sum << endl;
-	cout << "Ïðîèçâåäåíèå ïåðâûõ " << n << " ÷ëåíîâ ðàâíà " << product << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¿ÐµÑ€Ð²Ñ‹Ñ… " << n << " Ñ‡Ð»ÐµÐ½Ð¾Ð² Ñ€Ð°Ð²Ð½Ð° " << sum << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ñ… " << n << " Ñ‡Ð»ÐµÐ½Ð¾Ð² Ñ€Ð°Ð²Ð½Ð° " << product << endl;
 
 	k_variant(n);
 

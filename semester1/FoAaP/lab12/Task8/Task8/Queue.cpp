@@ -1,4 +1,4 @@
-#include "Queue.h";
+﻿#include "Queue.h";
 
 //Forming of queue
 Node_q* first_q(char d) {

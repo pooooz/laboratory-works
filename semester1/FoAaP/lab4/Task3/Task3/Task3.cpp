@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 
 using namespace std;
@@ -58,22 +58,22 @@ int main() {
 
 	double h, x, comparison;
 
-	cout << "Ââåäèòå òî÷íîñòü h: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ h: ";
 	cin >> h;
 
-	cout << "Ââåäèòå x: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ x: ";
 	cin >> x;
 
 	cout << "\n\n";
 
 	comparison = cosh(x);
 
-	cout << "Ñóììà èç for:  " << for_realization(h, x) << endl;
-	cout << "Ñóììà èç while: " << while_realization(h, x) << endl;;
-	cout << "Ñóììà èç do while: " << while_realization(h, x) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¸Ð· for:  " << for_realization(h, x) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¸Ð· while: " << while_realization(h, x) << endl;;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¸Ð· do while: " << while_realization(h, x) << endl;
 
 
-	cout << "Ôóíêöèÿ èç cmath: " << comparison << "\n\n";
+	cout << "Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¸Ð· cmath: " << comparison << "\n\n";
 
 
 	system("pause");

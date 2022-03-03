@@ -39,21 +39,25 @@ int main() {
 	Point A = Point(x1, y1),
 		  B = Point(x2, y2),
 		  C = Point(x3, y3);
+	try {
+		Triangle triangle = Triangle(A, B, C);
+		Point medianPoint = triangle.get_median_point();
+		cout << "\n";
 
-	Triangle triangle = Triangle(A, B, C);
-	Point medianPoint = triangle.get_median_point();
+		cout << "Координата x точки пересечения медиан треугольника: " << medianPoint.getX() << endl;
+		cout << "Координата y точки пересечения медиан треугольника: " << medianPoint.getY() << endl;
 
-	cout << "\n";
+		cout << "\n\n";
 
-	cout << "Координата x точки пересечения медиан треугольника: " << medianPoint.getX() << endl;
-	cout << "Координата y точки пересечения медиан треугольника: " << medianPoint.getY() << endl;
+		Point heightsPoint = triangle.get_heights_point();
 
-	cout << "\n\n";
-
-	Point heightsPoint = triangle.get_heights_point();
-
-	cout << "Координата x точки пересечения высот треугольника: " << heightsPoint.getX() << endl;
-	cout << "Координата y точки пересечения высот треугольника: " << heightsPoint.getY() << endl;
-
+		cout << "Координата x точки пересечения высот треугольника: " << heightsPoint.getX() << endl;
+		cout << "Координата y точки пересечения высот треугольника: " << heightsPoint.getY() << endl;
+	}
+	catch (std::invalid_argument const& ex) {
+		cerr << "\n\n" << ex.what() << endl;
+		cerr << "\n" << "Треугольник не существует!" << endl;
+	}
+	
 	return 0;
 }

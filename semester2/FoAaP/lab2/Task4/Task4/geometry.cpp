@@ -178,7 +178,7 @@ Triangle::Triangle(Point A, Point B, Point C) {
         cout << "\n" << "Всё нормально, треугольник существует ;)" << endl;
     }
     else {
-        cout << "\n" << "Треугольник не существует!" << endl;
+        throw std::invalid_argument("Введены неверные значения");
     }
 }
 

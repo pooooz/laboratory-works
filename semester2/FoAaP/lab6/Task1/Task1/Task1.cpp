@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <regex>
 #include <Windows.h>
@@ -10,7 +10,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 
-	cout << "Ââåäèòå íà÷àëüíóþ ñòðîêó: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ: " << endl;
 	string base;
 	getline(cin, base);
 
@@ -18,9 +18,9 @@ int main() {
 
 	regex ex("\\([^\\)]*\\)");
 
-	cout << "Íà÷àëüíàÿ ñòðîêà: " << base << endl;
+	cout << "ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ ÑÑ‚Ñ€Ð¾ÐºÐ°: " << base << endl;
 	string new_str = regex_replace(base, ex, "");
-	cout << "Ôîðìàòèðîâàííàÿ ñòðîêà: " << new_str << endl;
+	cout << "Ð¤Ð¾Ñ€Ð¼Ð°Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð°Ñ ÑÑ‚Ñ€Ð¾ÐºÐ°: " << new_str << endl;
 
 	return 0;
 }

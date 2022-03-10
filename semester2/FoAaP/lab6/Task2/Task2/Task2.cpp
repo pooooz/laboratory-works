@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -7,7 +7,7 @@ void enter_number(long double& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
@@ -15,7 +15,7 @@ void enter_number(int& n) {
 	while (!(cin >> n) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
@@ -24,21 +24,21 @@ int main() {
 
 	vector<long double> subsequence1;
 
-	cout << "Ââåäèòå êîëè÷åñòâî ÷ëåíîâ ïîñëåäîâàòåëüíîñòè: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: " << endl;
 	int n;
 	enter_number(n);
 
-	cout << "Çàïîëíèòå ïîñëåäîâàòåëüíîñòü!" << endl;
+	cout << "Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚Ðµ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ!" << endl;
 
 	for (int i = 0; i < n; i++) {
-		cout << "Ââåäèòå " << i + 1 << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		long double temp;
 		enter_number(temp);
 		subsequence1.push_back(temp);
 	}
 
 	cout << "\n";
-	cout << "Âõîäíàÿ ïîñëåäîâàòåëüíîñòü: " << endl;
+	cout << "Ð’Ñ…Ð¾Ð´Ð½Ð°Ñ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: " << endl;
 	cout << "[ ";
 	for (int i = 0; i < n; i++) {
 		cout << subsequence1[i] << ", ";
@@ -59,7 +59,7 @@ int main() {
 		}
 	}
 
-	cout << "\nÂûõîäíàÿ ïîñëåäîâàòåëüíîñòü: " << endl;
+	cout << "\nÐ’Ñ‹Ñ…Ð¾Ð´Ð½Ð°Ñ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: " << endl;
 	cout << "[ ";
 	for (int i = 0; i < n; i++) {
 		cout << subsequence2[i] << ", ";

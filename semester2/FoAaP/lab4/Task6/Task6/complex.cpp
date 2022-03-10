@@ -19,7 +19,7 @@ complex complex::operator - (complex second) {
 }
 
 complex complex::operator / (complex second) {
-	if (second.get_Re() != 0 && second.get_Im() != 0) {
+	if ((second.get_Re() * second.get_Re() + second.get_Im()  * second.get_Im()) != 0) {
 		long double Re = (this->get_Re() * second.get_Re() + this->get_Im() * second.get_Im()) /
 			(second.get_Re() * second.get_Re() + second.get_Im() * second.get_Im());
 

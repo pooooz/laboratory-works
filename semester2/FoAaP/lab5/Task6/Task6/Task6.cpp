@@ -18,6 +18,11 @@ class Matrix {
 	T** table;
 
 public:
+	Matrix() {
+		this->N = 0;
+		this->table = nullptr;
+	}
+
 	Matrix(int n) {
 		if (n <= 0) {
 			throw invalid_argument("N должно быть строго больше 0");
@@ -37,14 +42,13 @@ public:
 		}
 	}
 
-	/*~Matrix()
-	{
+	~Matrix() {
 		for (int i = 0; i < this->N; i++) {
 			delete[] this->table[i];
 		}
 
 		delete[] this->table;
-	}*/
+	}
 
 	int get_N() {
 		return this->N;
@@ -71,7 +75,23 @@ public:
 		return res;
 	}
 
-	Matrix operator=(const Matrix& matrix) {
+	Matrix(const Matrix& matrix) {
+		this->N = matrix.N;
+
+		this->table = new T * [this->N];
+		for (int i = 0; i < this->N; i++) {
+			this->table[i] = new T[this->N];
+
+		}
+
+		for (int i = 0; i < this->N; i++) {
+			for (int j = 0; j < this->N; j++) {
+				this->table[i][j] = matrix.table[i][j];
+			}
+		}
+	}
+
+	Matrix& operator=(const Matrix& matrix) {
 		if (this->N > 0) {
 			for (int i = 0; i < this->N; i++) {
 				delete[] this->table[i];
@@ -112,10 +132,10 @@ public:
 		return os;
 	}
 
-	friend std::istream& operator >> (istream& in, Matrix& matrix) {
+	friend istream& operator >> (istream& in, Matrix& matrix) {
 		for (int i = 0; i < matrix.N; i++) {
 			for (int j = 0; j < matrix.N; j++) {
-				cout << "Введите элемент " << i << ", " << j << ": ";
+				cout << "Введите элемент (" << i << ", " << j << "): ";
 				enter_number(matrix.table[i][j]);
 			}
 			cout << endl;
@@ -150,7 +170,8 @@ int main() {
 		cout << "Матрица matrix1: " << endl;
 		cout << matrix1;
 
-		Matrix<double> matrix2 = matrix1;
+		Matrix<double> matrix2;
+		matrix2 = matrix1;
 		cout << "Матрица matrix2(создана копированием matrix1): " << endl;
 		cout << matrix2;
 		cout << "Переопределите значение элементов матрицы matrix2:" << endl;
@@ -168,7 +189,6 @@ int main() {
 
 		cout << "Матрица matrix1 в степени " << n << endl;
 		cout << matrix1.pow(n);
-
 	}
 	catch (invalid_argument& error) {
 		cout << error.what() << endl;

@@ -65,7 +65,7 @@ public:
 
 	Matrix pow(int n) {
 		Matrix res(this->N);
-		if (n < 0) {
+		if (n <= 0) {
 			throw invalid_argument("Натуральные числа это 1, 2, 3, ...");
 		}
 		res = *this;

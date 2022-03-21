@@ -110,6 +110,9 @@ public:
 	friend ostream& operator << (ostream& os, const Matrix matrix) {
 		for (int i = 0; i < matrix.N; i++) {
 			for (int j = 0; j < matrix.M; j++) {
+				if (j == matrix.M - 1) {
+					os << "|";
+				}
 				os << setw(12) << matrix.table[i][j];
 			}
 			os << endl;
@@ -142,59 +145,67 @@ public:
 		}
 	}
 
+	T variables_line_sum(int line) {
+		T sum = 0;
+		for (int i = 0; i < this->M - 1; i++) {
+			sum += this->table[line][i];
+		}
+		return sum;
+	}
 
+	// Ниже костыльно, но сырно
 	void straight_stroke() {
 		for (int i = 0; i < this->N; i++) {
 			int counter = 0;
-			if (this->table[i][i] == 0 && i != this->N-1) {
-				for (int index = this->N - 1; index >= 0; index--) {
+			if (this->table[i][i] == 0 && i != this->N - 1) {
+				for (int index = this->N - 1; index > i; index--) {
 					if (this->table[index][i] != 0) {
 						swap(this->table[i], this->table[index]);
 						cout << *this;
+						counter++;
 						break;
 					}
 				}
-				counter++;
 			}
 
-			if (this->table[i][i] == 0) {
+			T sum = variables_line_sum(i);
+			if (this->table[i][i] == 0 && sum == 0) {
 				break;
 			}
-			divide_line_by(this->table[i][i], i);
-			for (int k = i + 1; k < this->N - counter; k++) {
-				subtract(k, i, this->table[k][i]);
+			else if (this->table[i][i] == 0 && sum != 0) {
+				divide_line_by(this->table[i][i + 1], i);
+				for (int k = i + 1; k < this->N - counter; k++) {
+					subtract(k, i, this->table[k][i + 1]);
+				}
 			}
+			else if (this->table[i][i] != 0) {
+				divide_line_by(this->table[i][i], i);
+				for (int k = i + 1; k < this->N - counter; k++) {
+					subtract(k, i, this->table[k][i]);
+				}
+			}
+
 			cout << *this;
 		}
 	}
 
 	void solution_verification() {
 		bool no_solutions = false;
+		T diagonal_sum = 0;
+
 		int min_variables_row_count = this->M - 1;
 		for (int i = 0; i < this->N; i++) {
-			T sum = 0;
-			for (int j = 0; j < this->M - 1; j++) {
-				sum += this->table[i][j];
-			}
+			T sum = variables_line_sum(i);
+
 			if (sum == 0 && this->table[i][this->M - 1] != 0) {
 				throw invalid_argument("Система не имеет решений");
 			}
-
-			if (sum != 0) {
-				int temp = 0;
-				for (int j = 0; j < this->M - 1; j++) {
-					if (this->table[i][j] != 0 && sum != 0) {
-						temp++;
-					}
-				}
-				if (temp < min_variables_row_count) {
-					min_variables_row_count = temp;
-				}
-			}
 		}
 
-		if (min_variables_row_count != 1) {
-			throw invalid_argument("Система имеет бесконечное множество решений");
+		for (int i = 0; i < this->N; i++) {
+			if (this->table[i][i] == 0) {
+				throw invalid_argument("Система имеет бесконечное множество решений");
+			}
 		}
 	}
 

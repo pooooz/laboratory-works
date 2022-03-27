@@ -218,7 +218,7 @@ public:
 		}
 		cout << "\n";
 
-		for (int k = this->M - 1; k >= 0; k--) {
+		for (int k = this->M - 2; k >= 0; k--) {
 			x[k] = y[k];
 			for (int i = 0; i < k; i++)
 				y[i] = y[i] - this->table[i][k] * x[k];

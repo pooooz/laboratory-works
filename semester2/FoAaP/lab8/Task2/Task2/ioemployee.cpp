@@ -38,7 +38,25 @@ istream& operator >> (istream& in, EMPLOYEE& Employee) {
 	in >> Employee.FirstName;
 	in >> Employee.MiddleName;
 	in >> Employee.Gender;
+	if (Employee.Gender != "мужской" && Employee.Gender != "женский") {
+		throw invalid_argument("Некорректно указан пол работника");
+	}
 	in >> Employee.Birthdate;
+
+	int dots_count = 0;
+	for (int i = 0; i < Employee.Birthdate.length(); i++) {
+		if (Employee.Birthdate[i] == '.') {
+			dots_count++;
+		}
+	}
+	if (dots_count != 2) {
+		throw invalid_argument("Некорректно указана дата рождения работника");
+	}
+
+	Date temp_date = convert(Employee.Birthdate);
+	int age = get_age(temp_date.day, temp_date.month, temp_date.year);
+	Employee.Age = age;
+
 	in >> Employee.Work_exp;
 	char buffer[1];
 	char char_buffer[255];
@@ -65,9 +83,8 @@ ostream& operator << (ostream& out, EMPLOYEE Employee) {
 	out << "Пол............: ";
 	out << Employee.Gender << endl;
 
-	int age = get_age(temp_date.day, temp_date.month, temp_date.year);
 	out << "Полных лет.....: ";
-	out << age << endl;
+	out << Employee.Age << endl;
 
 	out << "Специальность..: ";
 	out << Employee.Speciality << endl;
@@ -104,6 +121,21 @@ ostream& operator << (ostream& out, GROUP Group) {
 	iter = Group.Employees.begin();
 	while (iter != Group.Employees.end()) {
 		out << *iter << endl;
+		iter++;
+	}
+
+	out << "*******************************" << endl;
+	out << "Сотрудники пенсионного возраста" << endl;
+	out << "*******************************" << endl;
+	out << "\n\n";
+
+
+	iter = Group.Employees.begin();
+	while (iter != Group.Employees.end()) {
+		if (((*iter).get_Gender() == "мужской" && (*iter).get_Age() >= 63) ||
+			((*iter).get_Gender() == "женский" && (*iter).get_Age() >= 58)) {
+			out << *iter << endl;
+		}
 		iter++;
 	}
 	return out;

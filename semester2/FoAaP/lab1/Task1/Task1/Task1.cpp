@@ -84,8 +84,8 @@ int main() {
 		print_retired_workers(employees, size);
 
 	}
-	catch (const char& error) {
-			cerr << error << endl;
+	catch (invalid_argument error) {
+			cerr << error.what() << endl;
 	}
 
 	return 0;

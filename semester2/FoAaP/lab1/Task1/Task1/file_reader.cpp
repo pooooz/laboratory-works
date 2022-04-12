@@ -1,6 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "file_reader.h"
 #include "constants.h"
+#include <iostream>
 
 #include <fstream>
 #include <cstring>
@@ -36,13 +37,26 @@ void read(const char* file_name, Employee* array[], int& size) {
     if (file.is_open()) {
         size = 0;
         char tmp_buffer[MAX_STRING_SIZE];
+        
         while (!file.eof()) {
             Employee* item = new Employee;
             file >> item->last_name;
             file >> item->first_name;
             file >> item->middle_name;
             file >> item->gender;
+            if (strcmp(item->gender, "мужской") != 0 && strcmp(item->gender, "женский") != 0) {
+                throw std::invalid_argument("Некорректно указан пол работника!");
+            }
             file >> tmp_buffer;
+            int dots_counter = 0;
+            for (int i = 0; i < sizeof(tmp_buffer) / sizeof(char); i++) {
+                if (tmp_buffer[i] == '.') {
+                    dots_counter++;
+                }
+            }
+            if (dots_counter != 2) {
+                throw std::invalid_argument("Некорректно указана дата рождения работника");
+            }
             item->birthdate = convert(tmp_buffer);
             item->age = get_age(item->birthdate.day, item->birthdate.month, item->birthdate.year);
             file >> item->work_experience;
@@ -51,9 +65,9 @@ void read(const char* file_name, Employee* array[], int& size) {
             file.getline(item->speciality, MAX_STRING_SIZE);
             array[size++] = item;
         }
-        file.close();
+        file.close();  
     }
     else {
-        throw "Ошибка открытия файла";
+        throw std::invalid_argument("Ошибка открытия файла");
     }
 }

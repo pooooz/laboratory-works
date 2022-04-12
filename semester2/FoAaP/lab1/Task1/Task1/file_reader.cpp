@@ -48,6 +48,15 @@ void read(const char* file_name, Employee* array[], int& size) {
                 throw std::invalid_argument("Некорректно указан пол работника!");
             }
             file >> tmp_buffer;
+            int dots_counter = 0;
+            for (int i = 0; i < sizeof(tmp_buffer) / sizeof(char); i++) {
+                if (tmp_buffer[i] == '.') {
+                    dots_counter++;
+                }
+            }
+            if (dots_counter != 2) {
+                throw std::invalid_argument("Некорректно указана дата рождения работника");
+            }
             item->birthdate = convert(tmp_buffer);
             item->age = get_age(item->birthdate.day, item->birthdate.month, item->birthdate.year);
             file >> item->work_experience;

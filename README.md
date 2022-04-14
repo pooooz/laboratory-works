@@ -2,10 +2,14 @@
 ## Speciality: ***Information technology software*** :computer:
 ### Variant: ***8***
 
-Abbreviations:  
+Abbreviations: 
+### (First semester)
+- FoAaP - Fundamentals of Algorithmization and Programming  
+- FoSE - Fundamentals of Software Engineering
+Eighth and ninth labs in Fundamentals of Software Engineering are here: https://github.com/pooooz/session-results
+
+### (Second semester)
 - FoAaP - Fundamentals of Algorithmization and Programming  
 - Numerical Methods - Numerical Methods
-- FoSE - Fundamentals of Software Engineering
 - AaDS - Algorithms and Data Structures
-
-Eighth and ninth labs in Fundamentals of Software Engineering are here: https://github.com/pooooz/session-results
+- SE - Software Engineering

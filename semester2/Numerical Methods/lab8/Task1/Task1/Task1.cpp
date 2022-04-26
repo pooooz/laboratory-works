@@ -36,8 +36,8 @@ class Matrix {
 
 	void check_diagonal_dominance() {
 		for (int i = 0; i < this->N; i++) {
-			T sum = variables_line_absolute_sum(i) - this->table[i][i];
-			if (this->table[i][i] <= fabs(sum)) {
+			T sum = variables_line_absolute_sum(i) - fabs(this->table[i][i]);
+			if (fabs(this->table[i][i]) <= fabs(sum)) {
 				this->is_diagonal_dominance = false;
 				throw invalid_argument("Ќе выполн€етс€ условие диагонального преобладани€");
 			}

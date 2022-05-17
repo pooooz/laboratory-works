@@ -31,8 +31,8 @@ void print_lagrange_polynomial(vector<double> x, vector<double> y) {
 		polynomial.push_back(to_string(fabs(y[i])) + "*");
 		for (int j = 0; j < size; j++) {
 			if (i != j) {
-				polynomial.push_back("((x-" + to_string(x[j]).erase(3) 
-					+ ") / (" + to_string(x[i]).erase(3) + "-" + to_string(x[j]).erase(3) + "))");
+				polynomial.push_back("((x-" + to_string(x[j]).erase(5) 
+					+ ") / (" + to_string(x[i]).erase(5) + "-" + to_string(x[j]).erase(5) + "))");
 				if (i != size - 1) {
 					if (j != size - 1)
 						polynomial.push_back(" * ");
@@ -80,7 +80,7 @@ void print_newton_polynomial(int n, vector<double> x, vector<double> y) {
 			string den_str;
 			for (int k = 0; k <= i; ++k)
 				if (k != j) {
-					den_str += "/(" + to_string(x[j]).erase(3) + " - " + to_string(x[k]).erase(3) + ")";
+					den_str += "/(" + to_string(x[j]).erase(5) + " - " + to_string(x[k]).erase(5) + ")";
 				}
 			if (j != 0) {
 				y[j] >= 0 ? F_str += " + " : F_str += " - ";
@@ -92,7 +92,7 @@ void print_newton_polynomial(int n, vector<double> x, vector<double> y) {
 			if (k == 0) {
 				F_str += ")";
 			}
-			F_str += " * (x - " + to_string(x[k]).erase(3) + ")";
+			F_str += " * (x - " + to_string(x[k]).erase(5) + ")";
 		}
 
 		polynomial.push_back(" + ((" + F_str + ")");

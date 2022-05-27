@@ -84,7 +84,7 @@ start:
     mov EBX, ptr dwNumber
     mov byte ptr szN + EBX - 2, 0
     
-	push szN
+    push szN
     call ptr atoi
     add ESP, 4
 

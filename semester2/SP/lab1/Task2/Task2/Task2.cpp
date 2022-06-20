@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 
 using namespace std;
@@ -8,7 +8,7 @@ void enter_number(n& x) {
 	while (!(cin >> x) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîğğåêòíîå çíà÷åíèå! Ïîâòîğèòå ââîä!!!" << endl;
+		cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ! ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´!!!" << endl;
 	}
 }
 
@@ -19,22 +19,22 @@ public:
 	ThreeDigitNumber(int number) {
 		try {
 			if (!(abs(number) > 99 && abs(number) < 1000)) {
-				throw invalid_argument("×èñëî äîëæíî áûòü òğ¸õçíà÷íûì");
+				throw invalid_argument("Ğ§Ğ¸ÑĞ»Ğ¾ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ñ‚Ñ€Ñ‘Ñ…Ğ·Ğ½Ğ°Ñ‡Ğ½Ñ‹Ğ¼");
 			}
 			
 			this->int_number = number;
 			this->string_number = to_string(this->int_number);
 			
 			char last_char = this->string_number[this->string_number.size() - 1];
-			cout << "Ïîñëåäíÿÿ öèôğà ñïğàâà: " << (int)last_char - (int)'0' << endl;
+			cout << "ĞŸĞ¾ÑĞ»ĞµĞ´Ğ½ÑÑ Ñ†Ğ¸Ñ„Ñ€Ğ° ÑĞ¿Ñ€Ğ°Ğ²Ğ°: " << (int)last_char - (int)'0' << endl;
 
 			this->string_number.pop_back();
 
 			if ((int)last_char - (int)'0' != 0 && this->int_number > 0) {
-				cout << "Ğåçóëüòàò: " << this->string_number.insert(0, 1, last_char) << endl;
+				cout << "Ğ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚: " << this->string_number.insert(0, 1, last_char) << endl;
 			}
 			else if ((int)last_char - (int)'0' != 0 && this->int_number < 0) {
-				cout << "Ğåçóëüòàò: " << this->string_number.insert(1, 1, last_char) << endl;
+				cout << "Ğ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚: " << this->string_number.insert(1, 1, last_char) << endl;
 			}
 		} 
 		catch (invalid_argument& error) {
@@ -47,7 +47,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	int number;
-	cout << "Ââåäèòå òğ¸ççà÷íîå ÷èñëî: ";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚Ñ€Ñ‘Ğ·Ğ·Ğ°Ñ‡Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 	enter_number(number);
 
 	ThreeDigitNumber three_digit_number(number);

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -7,7 +7,7 @@ void enter_number(n& x) {
 	while (!(cin >> x) || (cin.peek() != '\n')) {
 		cin.clear();
 		while (cin.get() != '\n');
-		cout << "Ââåäåíî íåêîððåêòíîå çíà÷åíèå! Ïîâòîðèòå ââîä!!!" << endl;
+		cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ! ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!!!" << endl;
 	}
 }
 
@@ -23,16 +23,16 @@ public:
 	BoatInTheRiver(double boat_speed_in_still_water, double river_speed) {
 		try {
 			if (boat_speed_in_still_water < 0 && river_speed < 0) {
-				throw invalid_argument("Êàòåð èëè ðåêà íå ìîæåò èìåòü îòðèöàòåëüíóþ ñêîðîñòü, âåäü ýòî íå ïðîåêöèÿ ñêîðîñòè íà ñèñòåìó êîîðäèíàò!");
+				throw invalid_argument("ÐšÐ°Ñ‚ÐµÑ€ Ð¸Ð»Ð¸ Ñ€ÐµÐºÐ° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¸Ð¼ÐµÑ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½ÑƒÑŽ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ, Ð²ÐµÐ´ÑŒ ÑÑ‚Ð¾ Ð½Ðµ Ð¿Ñ€Ð¾ÐµÐºÑ†Ð¸Ñ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸ Ð½Ð° ÑÐ¸ÑÑ‚ÐµÐ¼Ñƒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚!");
 			}
 
 			this->boat_speed_in_still_water = boat_speed_in_still_water;
 			this->river_speed = river_speed;
 
 			this->attitude = fabs(boat_speed_in_still_water + river_speed) / fabs(boat_speed_in_still_water - river_speed);
-			cout << "\nÑêîðîñòü êàòåðà ïî òå÷åíèþ: " << fabs(boat_speed_in_still_water + river_speed) << endl;
-			cout << "Ñêîðîñòü êàòåðà ïðîòèâ òå÷åíèÿ: " << fabs(boat_speed_in_still_water - river_speed) << endl;
-			cout << "\nÎòíîøåíèå ñêîðîñòè ïî òå÷åíèþ ê ñêîðîñòè ïðîòèâ òå÷åíèÿ: " << this->resolve() << endl;
+			cout << "\nÐ¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ ÐºÐ°Ñ‚ÐµÑ€Ð° Ð¿Ð¾ Ñ‚ÐµÑ‡ÐµÐ½Ð¸ÑŽ: " << fabs(boat_speed_in_still_water + river_speed) << endl;
+			cout << "Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ ÐºÐ°Ñ‚ÐµÑ€Ð° Ð¿Ñ€Ð¾Ñ‚Ð¸Ð² Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ñ: " << fabs(boat_speed_in_still_water - river_speed) << endl;
+			cout << "\nÐžÑ‚Ð½Ð¾ÑˆÐµÐ½Ð¸Ðµ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸ Ð¿Ð¾ Ñ‚ÐµÑ‡ÐµÐ½Ð¸ÑŽ Ðº ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð² Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ñ: " << this->resolve() << endl;
 
 		} 
 		catch(invalid_argument& error) {
@@ -45,9 +45,9 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	double A;
 	double B;
-	cout << "Ââåäèòå ñêîðîñòü êàòåðà (êì/÷): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ ÐºÐ°Ñ‚ÐµÑ€Ð° (ÐºÐ¼/Ñ‡): ";
 	enter_number(A);
-	cout << "Ââåäèòå ñêîðîñòü ðåêè (êì/÷): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ñ€ÐµÐºÐ¸ (ÐºÐ¼/Ñ‡): ";
 	enter_number(B);
 	BoatInTheRiver boat_in_the_river(A, B);
 

@@ -19,7 +19,7 @@ class ArrayOfLargestModules {
 	int* max_elements = nullptr;
 
 	void print_info() {
-		cout << "Ваш массив: " << setw(21) << " max" << endl;
+		cout << "Ваш массив: " << setw(this->m * 8 - 3) << " max" << endl;
 		for (int i = 0; i < this->n; i++) {
 			for (int j = 0; j < this->m; j++) {
 				cout << setw(8) << this->arr[i][j];

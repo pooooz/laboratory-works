@@ -5,8 +5,7 @@ using namespace std;
 class LuckyNumbers {
 	int digits_sum(int i) {
 		int sum = 0;
-		while (i > 0)
-		{
+		while (i > 0) {
 			sum += i % 10;
 			i /= 10;
 		}

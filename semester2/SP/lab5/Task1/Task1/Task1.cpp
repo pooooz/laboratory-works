@@ -35,10 +35,6 @@ int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	if (int('-') == int(' ')) {
-		cout << "Пиздец" << endl;
-	}
-
 	cout << "Введите строку: ";
 	string str;
 	getline(cin, str);

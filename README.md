@@ -13,3 +13,4 @@ Eighth and ninth labs in Fundamentals of Software Engineering are here: https://
 - Numerical Methods - Numerical Methods
 - AaDS - Algorithms and Data Structures
 - SE - Software Engineering
+- SP - Summer Practice
